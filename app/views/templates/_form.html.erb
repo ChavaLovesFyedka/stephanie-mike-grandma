@@ -1,0 +1,53 @@
+<%= form_for(@variables) do |f| %>
+  <% if @template.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@template.errors.count, "error") %> prohibited this template from being saved:</h2>
+
+      <ul>
+      <% @template.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  
+
+
+  <div class="form">
+  <p>
+    <%= @template.sentence_1 %>
+    <%= f.text_field :variable_1_text %> </p>
+  
+  </div>
+
+  <div class="form">
+  <p>
+    <%= @template.sentence_2 %>
+    <%= f.text_field :variable_2_text %>, </p>
+  </div>
+
+  <div class="form">
+  <p>
+    <%= @template.sentence_3 %>
+    <%= f.text_field :variable_3_text %>, </p>
+  </div>
+
+  <div class="form">
+  <p>
+    <%= @template.sentence_4 %>
+    <%= f.text_field :variable_4_text %>, </p>
+  </div>
+
+  <div class="form">
+  <p>
+    <%= @template.sentence_5 %>
+    <%= f.text_field :variable_5_text %>, </p>
+  </div>
+
+
+
+  <div class="actions">
+    <%= f.submit "Create Letter" %>
+  </div>
+<% end %>
