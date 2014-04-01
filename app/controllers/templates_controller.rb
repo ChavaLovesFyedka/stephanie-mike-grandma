@@ -20,7 +20,7 @@ class TemplatesController < ApplicationController
   # GET /templates/new
   def new
     @template = Template.find_by(:id => '1')
-    @variables = Variable.new
+    @variable = Variable.new
     
     
   end
@@ -78,7 +78,7 @@ class TemplatesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def template_params
-      params.require(:variable).permit(:sentence_1, :variable_1_text, :sentence_2, :variable_2_text, :sentence_3, :variable_3_text, :sentence_4, :variable_4_text, :sentence_5, :variable_5_text)
+      params.require(:template).permit(:sentence_1, :variable_1_text, :sentence_2, :variable_2_text, :sentence_3, :variable_3_text, :sentence_4, :variable_4_text, :sentence_5, :variable_5_text)
       #params.require(:person).permit(:name, :age)
     end
 end
