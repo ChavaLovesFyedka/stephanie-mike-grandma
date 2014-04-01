@@ -10,33 +10,20 @@
 # you'll amass, the slower it'll run and the greater likelihood for issues).
 #
 # It's strongly recommended that you check this file into your version control system.
+ActiveRecord::Schema.define(version: 20140401190626) do
 
-ActiveRecord::Schema.define(version: 20140401144520) do
+  create_table "users", force: true do |t|
+    t.text     "var1"
+    t.text     "var2"
+    t.text     "var3"
+    t.text     "var4"
+    t.text     "var5"
+    t.text     "var6"
+    t.text     "var7"
+    t.text     "var8"
+    t.text     "var9"
+    t.text     "var10"
 
-  create_table "sentences", force: true do |t|
-    t.integer  "template_id"
-    t.integer  "variable_id"
-    t.text     "sentence_text"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "templates", force: true do |t|
-    t.text     "sentence_1"
-    t.text     "sentence_2"
-    t.text     "sentence_3"
-    t.text     "sentence_4"
-    t.text     "sentence_5"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "variables", force: true do |t|
-    t.text     "variable_1_text"
-    t.text     "variable_2_text"
-    t.text     "variable_3_text"
-    t.text     "variable_4_text"
-    t.text     "variable_5_text"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
