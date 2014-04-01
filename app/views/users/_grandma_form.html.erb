@@ -1,0 +1,57 @@
+<%= form_for(@user) do |f| %>
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+      <% @user.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :var1, "What do you call your Grandma?" %><br>
+    <%= f.text_area :var1 %>
+  </div>
+  <div class="field">
+    <%= f.label :var2, "Where does your Grandma live?" %><br>
+    <%= f.text_area :var2 %>
+  </div>
+  <div class="field">
+    <%= f.label :var3, "List one thing you did today." %><br>
+    <%= f.text_area :var3 %>
+  </div>
+  <div class="field">
+    <%= f.label :var4, "And how do you feel about what you did today?" %><br>
+    <%= f.text_area :var4 %>
+  </div>
+  <div class="field">
+    <%= f.label :var5, "What are you doing tomorrow?" %><br>
+    <%= f.text_area :var5 %>
+  </div>
+    <div class="field">
+    <%= f.label :var6, "Name something your Grandma is into." %><br>
+    <%= f.text_area :var6 %>
+  </div>
+  <div class="field">
+    <%= f.label :var7, "Enter a question for Grandma about something before you were born." %><br>
+    <%= f.text_area :var7 %>
+  </div>
+  <div class="field">
+    <%= f.label :var8, "Pick a current event, TV show, movie or book." %><br>
+    <%= f.text_area :var8 %>
+  </div>
+  <div class="field">
+    <%= f.label :var9, "What's something you hope to do with Grandma soon?  (bake cookies, go fishing)" %><br>
+    <%= f.text_area :var9 %>
+  </div>
+  <div class="field">
+    <%= f.label :var10, "Your name." %><br>
+    <%= f.text_area :var10 %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
