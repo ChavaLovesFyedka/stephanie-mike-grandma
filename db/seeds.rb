@@ -7,11 +7,11 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 #Template 1
-Template.create(:sentence_1 => 'Dear ', 
-                :sentence_2 => 'Today I ', 
-                :sentence_3 => 'Tomorrow I plan to ', 
-                :sentence_4 => 'Tell me more about ', 
-                :sentence_5 => 'Love ')
+# Template.create(:sentence_1 => 'Dear ', 
+#                 :sentence_2 => 'Today I ', 
+#                 :sentence_3 => 'Tomorrow I plan to ', 
+#                 :sentence_4 => 'Tell me more about ', 
+#                 :sentence_5 => 'Love ')
 
 #Sentences
 #Sentence.create(:template_id => '1', :sentence_text => "Dear [[var1]],", :variable_id => '1')
@@ -19,4 +19,19 @@ Template.create(:sentence_1 => 'Dear ',
 
 #Variables
 #Variable.create(:sentence_id => '1', :variable_text => "Grandma")
+
+Letter.create(:content => "Hi {{name}},
+
+Today I felt {{adjective}}.")
+
+Letter.create(:content => "Dear Mr. President,
+
+I am a {{noun}} that lives in {{city}}. My advice for America would be to {{idea}}.
+
+In general I think the country is doing {{adjective}}.
+
+Thank you for your time,
+
+{{name}}.
+")
 

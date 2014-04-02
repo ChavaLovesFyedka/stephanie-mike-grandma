@@ -1,0 +1,7 @@
+<form action="/letters/1/drafts" method="POST">
+
+<%= form_tag(letter_drafts_path(@letter)) do %>
+<%= render 'letters/user_form', :letter => @letter %>
+
+<input type="submit">
+<% end %>

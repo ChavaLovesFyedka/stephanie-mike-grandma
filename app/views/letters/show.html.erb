@@ -1,46 +1,15 @@
-<p id="notice"><%= notice %></p>
+<h1>Letter Content</h1>
 
-<p>
-  Dear <%= @letter.var1 %>,
-</p><br>
+<pre>
+<%= @letter.content %>
+</pre>
 
-<p>
-  Hello!  I hope things are well with you in <%= @letter.var2 %>.
-</p><br>
+<h1>Letter Preview</h1>
+<form>
+<%= render 'letters/user_form', :letter => @letter %>
+</form>
 
-<p>
-  Guess what I did today -- <%= @letter.var3 %>.
-</p><br>
-
-<p>
-  It was <%= @letter.var4 %>.
-</p><br>
-
-<p>
-  Tomorrow, I plan to <%= @letter.var5 %>.
-</p><br>
-
-<p>
-  What's new with <%= @letter.var6 %>?
-</p><br>
-
-<p>
-  Tell me more about <%= @letter.var7 %>.
-</p><br>
-
-<p>
-  Have you heard of <%= @letter.var8 %>?  Thoughts?
-</p><br>
-
-<p>
-  I hope we can <%= @letter.var9 %> soon.
-</p><br>
-
-<p>
-  Love,<br>
-  <%= @letter.var10 %>
-</p><br>
-
-
-<%= link_to 'Edit', edit_letter_path(@letter) %> |
-<%= link_to 'Back', letters_path %>
+<h1>A Sample of a Filled In Letter Draft</h1>
+<%
+%>
+<%= render 'letters/user_draft', :letter => @letter %>

@@ -1,0 +1,14 @@
+<%
+@data = letter.content.split("\n")
+
+%>
+
+<% @data.each do |line| %>
+  <p>
+    <% placeholder = line.match(/{{(.+?)}}/).to_s %>
+    <%= line.gsub(/({{.+?}})/, "<input type=\"text\" name=\"variables[]\" placeholder=\"#{placeholder}\">").html_safe %>
+  </p>
+<% end %>
+@letter.variables #=> [{{name}}, ]
+
+@draft.replace_varialbe(:name, "Avi")

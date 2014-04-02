@@ -11,19 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140401190626) do
+ActiveRecord::Schema.define(version: 20140402141903) do
+
+  create_table "drafts", force: true do |t|
+    t.integer  "letter_id"
+    t.integer  "variable_ordinal"
+    t.text     "variable_content"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "letters", force: true do |t|
-    t.text     "var1"
-    t.text     "var2"
-    t.text     "var3"
-    t.text     "var4"
-    t.text     "var5"
-    t.text     "var6"
-    t.text     "var7"
-    t.text     "var8"
-    t.text     "var9"
-    t.text     "var10"
+    t.text     "content"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

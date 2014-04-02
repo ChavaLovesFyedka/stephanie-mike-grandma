@@ -1,0 +1,12 @@
+<% content = @letter.content %>
+<%
+  @letter.drafts.each_with_index do |draft, i|
+
+    current_replacement = content.match(/({{.+?}})/)[i]
+    # binding.pry
+    content.gsub!(current_replacement, draft.variable_content)
+  end
+
+%>
+
+<%= content %>
