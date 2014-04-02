@@ -19,7 +19,7 @@ Bullet point some of the key features of your app here.
 
 ## Usage
 
-How do users use your app?
+How do letters use your app?
 
 ## Development/Contribution
 

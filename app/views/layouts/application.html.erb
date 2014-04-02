@@ -1,15 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>GrandmaApp</title>
+  <title>Dear Grandma</title>
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= javascript_include_tag 'application' %>
+  <link href='http://fonts.googleapis.com/css?family=Gloria+Hallelujah' rel='stylesheet' type='text/css'>
   <%= csrf_meta_tags %>
   <%= analytics_init if Rails.env.production? %>
 </head>
 <body>
-
-<%= yield %>
-
+  <div class="container">
+   
+    <div class="header">
+      <ul class="nav nav-pills pull-right">
+        <li><a href="/">Home</a></li>
+        <li><a href="/">About</a></li>
+      
+      </ul>
+      <h3 class="grandma_h1">Dear Grandma</h3>
+     </div>
+            <%= yield %>
+    
+  </div>
 </body>
 </html>

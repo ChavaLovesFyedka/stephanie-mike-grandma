@@ -10,9 +10,10 @@
 # you'll amass, the slower it'll run and the greater likelihood for issues).
 #
 # It's strongly recommended that you check this file into your version control system.
+
 ActiveRecord::Schema.define(version: 20140401190626) do
 
-  create_table "users", force: true do |t|
+  create_table "letters", force: true do |t|
     t.text     "var1"
     t.text     "var2"
     t.text     "var3"
@@ -23,7 +24,6 @@ ActiveRecord::Schema.define(version: 20140401190626) do
     t.text     "var8"
     t.text     "var9"
     t.text     "var10"
-
     t.datetime "created_at"
     t.datetime "updated_at"
   end

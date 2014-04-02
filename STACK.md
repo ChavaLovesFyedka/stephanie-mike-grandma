@@ -28,7 +28,7 @@ TODO:
     * If you entered your api key during project creation, you're all set!
     * Otherwise, visit [Airbrake](https://airbrake.io/account/new/Free) and set
     up a free account.
-    * When it asks for "subdomain", it really means "username" (it's also a required
+    * When it asks for "subdomain", it really means "lettername" (it's also a required
       field, even though it doesn't seem like it)
     * Generate your api key, then on your command line (in the project root), run:
       `rails g airbrake --api-key your_api_key_here

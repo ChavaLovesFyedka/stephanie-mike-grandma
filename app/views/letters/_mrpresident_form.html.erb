@@ -1,0 +1,153 @@
+<%= form_for(@letter) do |f| %>
+  <% if @letter.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@letter.errors.count, "error") %> prohibited this letter from being saved:</h2>
+
+      <ul>
+      <% @letter.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :var1, "Emotion noun" %><br>
+    <%= f.text_area :var1 %>
+  </div>
+  <div class="field">
+    <%= f.label :var2, "Political or world event" %><br>
+    <%= f.text_area :var2 %>
+  </div>
+  <div class="field">
+    <%= f.label :var3, "Length of time" %><br>
+    <%= f.text_area :var3 %>
+  </div>
+  <div class="field">
+    <%= f.label :var4, "People of a certain country" %><br>
+    <%= f.text_area :var4 %>
+  </div>
+  <div class="field">
+    <%= f.label :var5, "Verb" %><br>
+    <%= f.text_area :var5 %>
+  </div>
+    <div class="field">
+    <%= f.label :var6, "Geographical landmark" %><br>
+    <%= f.text_area :var6 %>
+  </div>
+  <div class="field">
+    <%= f.label :var7, "Verb" %><br>
+    <%= f.text_area :var7 %>
+  </div>
+  <div class="field">
+    <%= f.label :var8, "Plural animal" %><br>
+    <%= f.text_area :var8 %>
+  </div>
+  <div class="field">
+    <%= f.label :var9, "Sport" %><br>
+    <%= f.text_area :var9 %>
+  </div>
+  <div class="field">
+    <%= f.label :var10, "Country" %><br>
+    <%= f.text_area :var10 %>
+  </div>
+  <div class="field">
+    <%= f.label :var11, "Plural Noun" %><br>
+    <%= f.text_area :var11 %>
+  </div>
+  <div class="field">
+    <%= f.label :var12, "Kind of event" %><br>
+    <%= f.text_area :var12 %>
+  </div>
+  <div class="field">
+    <%= f.label :var13, "Plural noun" %><br>
+    <%= f.text_area :var13 %>
+  </div>
+  <div class="field">
+    <%= f.label :var14, "Number" %><br>
+    <%= f.text_area :var14 %>
+  </div>
+  <div class="field">
+    <%= f.label :var15, "Plural noun" %><br>
+    <%= f.text_area :var15 %>
+  </div>
+  <div class="field">
+    <%= f.label :var16, "Plural noun" %><br>
+    <%= f.text_area :var16 %>
+  </div>
+  <div class="field">
+    <%= f.label :var17, "Country" %><br>
+    <%= f.text_area :var17 %>
+  </div>
+  <div class="field">
+    <%= f.label :var18, "Plural noun" %><br>
+    <%= f.text_area :var18 %>
+  </div>
+  <div class="field">
+    <%= f.label :var19, "Plural noun" %><br>
+    <%= f.text_area :var19 %>
+  </div>
+  <div class="field">
+    <%= f.label :var20, "Verb" %><br>
+    <%= f.text_area :var20 %>
+  </div>
+  <div class="field">
+    <%= f.label :var21, "Verb" %><br>
+    <%= f.text_area :var21 %>
+  </div>
+  <div class="field">
+    <%= f.label :var22, "Emotional Adjective" %><br>
+    <%= f.text_area :var22 %>
+  </div>
+  <div class="field">
+    <%= f.label :var23, "Noun" %><br>
+    <%= f.text_area :var23 %>
+  </div>
+  <div class="field">
+    <%= f.label :var24, "Your name." %><br>
+    <%= f.text_area :var24 %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+
+
+
+<!-- Dear Mr President
+
+I'm writing to you today to express my [emotion] anger  with how you are handling the [political/world event] that thing in syria . For [length of time] 2 weeks you have been urging the [people of a certain country] somalians to [verb] stab on [geographical landmark] taj mahal. The time has come for you to [verb] dance with [plural animal] water buffalos. If you could try harder at [sport] golf then the people of [country] canada would respect you like the respect [plural noun]coats . 
+
+As for my part, I will organize a [kind of event] olympics to rally up support for the [plural noun] condiments . We only need [number] 21 [nouns]shoes  and a pair of [plural noun] beards. I foresee a future [country] denmark where both [plural noun] trashcans and [plural noun] barbie dolls [verb] stare together in harmony.
+
+Thank you for taking the time from [present tense verb] licking to read my letter. I hope you are [emotion] euphoric enough to reply and I look forward to your [noun] pencil.
+
+All the best.
+[your name] Stephanie
+
+var1 = emotion noun
+var2 = political or world event
+var3 = length of time
+var4 = people of a certain country
+var5 = verb
+var6 = geographical landmark
+var7 = verb
+var8 = plural animal
+var9 = sport
+var10 = country
+var11 = plural noun
+var12 = kind of event
+var13 = plural noun
+var14 = number
+var15 = plural noun
+var16 = plural noun
+var17 = country
+var18 = plural noun
+var19 = plural noun
+var20 = verb
+var21 = present tense verb
+var22 = emotion adjectice
+var23 = noun
+var24 = your name
+ -->
+
