@@ -1,14 +1,19 @@
+<div class="jumbotron">
+
 <%
 @data = letter.content.split(/(.+?}})/)
 
 %>
-
+<p>
 <% @data.each do |line| %>
-  <p>
+  
     <% placeholder = line.match(/{{(.+?)}}/).to_s.gsub("{", "").gsub("}", "") %>
     <%= line.gsub(/({{.+?}})/, "<input type=\"text\" name=\"variables[]\" placeholder=\"#{placeholder}\">").html_safe %>
-  </p>
+  
 <% end %>
+<p>
 <!--@letter.variables #=> [{{name}}, ]
 
 @draft.replace_varialbe(:name, "Avi") -->
+
+</div>

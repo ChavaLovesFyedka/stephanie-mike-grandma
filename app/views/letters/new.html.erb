@@ -1,10 +1,19 @@
-<h1>New letter</h1>
+<h1>Create a template!</h1>
+<div class="jumbotron">
+  <p><h3>Instructions</h3></p>
+  <p><h4>Write a letter or story in the box below. When you want to mark a word for replacement, surround it with {{ }} and when you submit, you'll get a new form with text fields to enter the replacement text. Here is an example:</h4></p>
 
+  <p><h4>Hi {{name}}! Do you like {{verb}}ing?</h4></p>
+  <p><h4>This allows the user to add in their text and get something like "Hi Billy! Do you like sailing?"</h4></p>
+
+  <p><h4>Give it a try!</h4></p>
 <%= form_for @letter do |f| %>
-  <%= f.label :content %>
-  <%= f.text_area :content %>
-  <%= f.submit "Create Letter" %>
+
+  <%= f.text_area :content, :size => "150x10" %>
+  <br>
+  <%= f.submit "Create Template", :class => "btn btn-success"%>
 <% end %>
 
 
-<%= link_to 'Back', letters_path %>
+
+</div>

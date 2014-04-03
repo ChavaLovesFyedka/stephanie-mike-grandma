@@ -1,20 +1,11 @@
-<%= @letter.content %>
-<br>
-<% @draft_variables.each do |d| %>
-<p>
-<%= d.variable_value %>
-</p>
-<% end %>
-
-
+<div class="jumbotron">
 
 <% @content = @letter.content %>
 <% current_replacement = @content.scan(/({{.+?}})/) %>
-<% @draft_variables.each_with_index do |draft, i| %>
-
-    
-   
-   <% @content.gsub!(current_replacement.flatten[i], draft.variable_value) %>
+  <% @draft_variables.each_with_index do |draft, i| %>    
+    <% @content.gsub!(current_replacement.flatten[i], draft.variable_value) %>
   <% end %>
 
 <%= @content %>
+
+</div>
