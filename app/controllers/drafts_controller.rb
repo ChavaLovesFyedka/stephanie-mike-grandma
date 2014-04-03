@@ -32,7 +32,9 @@ class DraftsController < ApplicationController
   def update
     @draft = Draft.find(params[:id])
     if @draft.update(draft_params)
+      flash[:notice] = "Email sent successfully!"
       DraftMailer.email_message(@draft).deliver
+
       redirect_to root_path, notice: 'draft was successfully updated.'
     else
       render action: 'edit'
