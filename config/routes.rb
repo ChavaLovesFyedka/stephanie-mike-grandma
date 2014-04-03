@@ -3,7 +3,7 @@ root 'letters#index'
 post '/email/send' => 'drafts#email'
 get '/about' => 'static_pages#about'
   resources :letters do
-    resources :drafts, :only => [:new, :create, :show]
+    resources :drafts, :only => [:new, :create, :show, :update]
   end
 
   # The priority is based upon order of creation: first created -> highest priority.
