@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140402153532) do
+ActiveRecord::Schema.define(version: 20140403185841) do
 
   create_table "draft_variables", force: true do |t|
     t.integer  "draft_id"
