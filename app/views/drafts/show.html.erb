@@ -9,10 +9,8 @@
   <% end %>
 
 <%= @content.html_safe %>
-
-<%= button_to "Send Email", :email_send %>
+<br>
 
 </div>
 
 
-DraftMailer.email_message(email).deliver

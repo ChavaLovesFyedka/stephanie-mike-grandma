@@ -1,8 +1,10 @@
 class EmailController < ApplicationController
-  #post
+  #binding.pry
+
   def send(email)
-    @email = email
-    DraftMailer.email_message(email).deliver
+    
   end
+
+
 
 end

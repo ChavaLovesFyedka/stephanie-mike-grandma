@@ -28,4 +28,11 @@ class DraftsController < ApplicationController
     
   end
 
+  #post email thing
+  def email
+    
+ 
+  end
+
+
 end

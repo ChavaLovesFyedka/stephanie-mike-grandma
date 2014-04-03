@@ -4,7 +4,7 @@ class DraftMailer < ActionMailer::Base
     mail(
       :subject => 'Hi from Dear Grandma!',
       :to      => user_email,
-      :from    => 'whaddupgrandma@flatironschool.com'
+      :from    => 'whaddupgrandma@flatironschool.com',
     )
   end
 end

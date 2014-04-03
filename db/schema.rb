@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(version: 20140402153532) do
     t.text     "variable_value"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "email"
   end
 
   create_table "letters", force: true do |t|
