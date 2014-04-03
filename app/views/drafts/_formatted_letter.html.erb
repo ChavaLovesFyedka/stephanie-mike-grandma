@@ -2,7 +2,7 @@
 <% current_replacement = @content.scan(/({{.+?}})/) %>
   <% if @draft_variables %>
     <% @draft_variables.each_with_index do |draft, i| %>    
-      <% @content.gsub!(current_replacement.flatten[i], draft.variable_value) %>
+      <% @content.sub!(current_replacement.flatten[i], draft.variable_value) %>
     <% end %>
   <% end %>
 
