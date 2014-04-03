@@ -10,9 +10,11 @@ class DraftsController < ApplicationController
 
     @letter = Letter.find(params[:letter_id])
     @draft = @letter.drafts.create
-    params[:variables].each_with_index do |variable, i|
-      @draft.draft_variables.create(:letter_id => @letter.id, :variable_ordinal => i, :variable_value => variable)      
-    end    # process their data
+    if params[:variables]
+      params[:variables].each_with_index do |variable, i|
+        @draft.draft_variables.create(:letter_id => @letter.id, :variable_ordinal => i, :variable_value => variable)      
+      end    # process their data
+    end
     #binding.pry
     redirect_to letter_draft_path(@letter, @draft)
   end

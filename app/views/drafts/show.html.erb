@@ -2,10 +2,17 @@
 
 <% @content = @letter.content %>
 <% current_replacement = @content.scan(/({{.+?}})/) %>
-  <% @draft_variables.each_with_index do |draft, i| %>    
-    <% @content.gsub!(current_replacement.flatten[i], draft.variable_value) %>
+  <% if @draft_variables %>
+    <% @draft_variables.each_with_index do |draft, i| %>    
+      <% @content.gsub!(current_replacement.flatten[i], draft.variable_value) %>
+    <% end %>
   <% end %>
 
-<%= @content %>
+<%= @content.html_safe %>
+
+<%= button_to "Send Email", :email_send %>
 
 </div>
+
+
+DraftMailer.email_message(email).deliver

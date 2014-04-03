@@ -27,8 +27,8 @@ class LettersController < ApplicationController
   # POST /letters.json
   def create
     @letter = Letter.new(letter_params)
-    binding.pry
-
+    #binding.pry
+    @letter.content.gsub!("\n","<br/>")
     respond_to do |format|
       if @letter.save
         format.html { redirect_to new_letter_draft_path(@letter), notice: 'letter was successfully created.' }

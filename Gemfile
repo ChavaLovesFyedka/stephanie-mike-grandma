@@ -24,7 +24,8 @@ gem 'spring',        group: :development
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-
+gem 'postmark-rails', '~> 0.5.2'
+gem 'figaro', git: 'https://github.com/laserlemon/figaro.git'
 # Use unicorn as the app server
 # gem 'unicorn'
 

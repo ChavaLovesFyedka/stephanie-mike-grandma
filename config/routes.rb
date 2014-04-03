@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-
-
+post '/email/send' => 'email#send'
+get '/about' => 'static_pages#about'
   resources :letters do
     resources :drafts, :only => [:new, :create, :show]
   end
