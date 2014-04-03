@@ -16,6 +16,7 @@ class LettersController < ApplicationController
   # GET /letters/new
   def new
     @letter = Letter.new
+    
   end
 
   # GET /letters/1/edit
@@ -26,10 +27,11 @@ class LettersController < ApplicationController
   # POST /letters.json
   def create
     @letter = Letter.new(letter_params)
+    
 
     respond_to do |format|
       if @letter.save
-        format.html { redirect_to @letter, notice: 'letter was successfully created.' }
+        format.html { redirect_to new_letter_draft_path(@letter), notice: 'letter was successfully created.' }
         format.json { render action: 'show', status: :created, location: @letter }
       else
         format.html { render action: 'new' }
@@ -70,6 +72,6 @@ class LettersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def letter_params
-      params.require(:letter).permit(:var1, :var2, :var3, :var4, :var5, :var6, :var7, :var8, :var9, :var10)
+      params.require(:letter).permit(:content)
     end
 end

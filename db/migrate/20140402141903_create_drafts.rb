@@ -3,7 +3,7 @@ class CreateDrafts < ActiveRecord::Migration
     create_table :drafts do |t|
       t.integer :letter_id
       t.integer :variable_ordinal
-      t.text    :variable_content
+      t.text    :variable_value
       
       t.timestamps
     end

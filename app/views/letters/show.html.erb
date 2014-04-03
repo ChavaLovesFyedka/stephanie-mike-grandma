@@ -1,15 +1,14 @@
 <h1>Letter Content</h1>
 
-<pre>
-<%= @letter.content %>
-</pre>
+<!--<pre>
+# @letter.content
+</pre> -->
 
 <h1>Letter Preview</h1>
-<form>
+<form method="post">
 <%= render 'letters/user_form', :letter => @letter %>
+<%= submit_tag "Generate Letter" %>
 </form>
 
-<h1>A Sample of a Filled In Letter Draft</h1>
-<%
-%>
-<%= render 'letters/user_draft', :letter => @letter %>
+<!-- <h1>A Sample of a Filled In Letter Draft</h1> 
+ render 'letters/user_draft', :letter => @letter %> -->

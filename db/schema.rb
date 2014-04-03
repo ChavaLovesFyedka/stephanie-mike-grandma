@@ -11,12 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140402141903) do
+ActiveRecord::Schema.define(version: 20140402153532) do
+
+  create_table "draft_variables", force: true do |t|
+    t.integer  "draft_id"
+    t.integer  "letter_id"
+    t.integer  "user_id"
+    t.integer  "variable_ordinal"
+    t.string   "variable_value"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "drafts", force: true do |t|
     t.integer  "letter_id"
     t.integer  "variable_ordinal"
-    t.text     "variable_content"
+    t.text     "variable_value"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

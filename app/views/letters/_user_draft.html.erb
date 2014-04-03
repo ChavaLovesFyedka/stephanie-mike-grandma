@@ -4,7 +4,7 @@
 
     current_replacement = content.match(/({{.+?}})/)[i]
     # binding.pry
-    content.gsub!(current_replacement, draft.variable_content)
+    content.gsub!(current_replacement, draft.variable_value)
   end
 
 %>
