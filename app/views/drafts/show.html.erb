@@ -2,10 +2,11 @@
 <%= render "drafts/formatted_letter" %>
 
 <br>
-
+<br>
+<br>
 <%= form_for [@letter, @draft] do |f| %>
-<%= f.email_field :email %>
-<%= f.submit %>
+<%= f.email_field :email, :placeholder => "enter your email" %><br>
+<%= f.submit "Share", :class => "btn btn-info dropdown-toggle" %>
 <% end %>
 
 

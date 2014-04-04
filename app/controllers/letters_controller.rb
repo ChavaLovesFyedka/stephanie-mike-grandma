@@ -72,6 +72,6 @@ class LettersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def letter_params
-      params.require(:letter).permit(:content)
+      params.require(:letter).permit(:content, :hidden)
     end
 end

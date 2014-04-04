@@ -11,6 +11,9 @@
 
   <%= f.text_area :content, :size => "150x10" %>
   <br>
+  <%= f.label :hidden, "Check this box to hide the letter text" %> &nbsp; 
+  <%= f.check_box :hidden %> 
+  <br>
   <%= f.submit "Create Template", :class => "btn btn-success"%>
 <% end %>
 

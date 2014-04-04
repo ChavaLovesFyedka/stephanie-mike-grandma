@@ -1,19 +1,20 @@
 <div class="jumbotron">
 
-<%
-@data = letter.content.split(/(.+?}})/)
+  <% if letter.hidden == 1 %>
+    <% @data = letter.content.split(/(.+?}})/).reject { |r| r.empty? }  %>
+    <p>
+      <% @data.each do |line| %>
+        <% placeholder = line.match(/{{(.+?)}}/).to_s.gsub("{", "").gsub("}", "") %>
+        <%= "<input type=\"text\" name=\"variables[]\" placeholder=\"#{placeholder}\">".html_safe %> 
+        <% end %>
+  <% else %>
 
-%>
-<p>
-<% @data.each do |line| %>
-  
-    <% placeholder = line.match(/{{(.+?)}}/).to_s.gsub("{", "").gsub("}", "") %>
-    <%= line.gsub(/({{.+?}})/, "<input type=\"text\" name=\"variables[]\" placeholder=\"#{placeholder}\">").html_safe %>
-  
-<% end %>
-<p>
-<!--@letter.variables #=> [{{name}}, ]
-
-@draft.replace_varialbe(:name, "Avi") -->
-
+    <% @data = letter.content.split(/(.+?}})/) %>
+    <p>
+      <% @data.each do |line| %>
+        <% placeholder = line.match(/{{(.+?)}}/).to_s.gsub("{", "").gsub("}", "") %>
+        <%= line.gsub(/({{.+?}})/, "<input type=\"text\" name=\"variables[]\" placeholder=\"#{placeholder}\">").html_safe %>  
+      <% end %>
+    </p>
+  <% end %>
 </div>
