@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140404133738) do
+ActiveRecord::Schema.define(version: 20140404155738) do
 
   create_table "draft_variables", force: true do |t|
     t.integer  "draft_id"
@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(version: 20140404133738) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "email"
+    t.string   "share_option"
   end
 
   create_table "letters", force: true do |t|

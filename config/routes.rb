@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 root 'letters#index'
+post '/email/share' => 'drafts#share'
 post '/email/send' => 'drafts#email'
 get '/about' => 'static_pages#about'
   resources :letters do

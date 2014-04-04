@@ -29,10 +29,15 @@ class DraftsController < ApplicationController
 
   end
 
+
+  def share
+
+  end
+
   def update
     @draft = Draft.find(params[:id])
     if @draft.update(draft_params)
-      flash[:notice] = "Email sent successfully!"
+      #flash[:notice] = "Email sent successfully!"
       DraftMailer.email_message(@draft).deliver
 
       redirect_to root_path, notice: 'draft was successfully updated.'
@@ -57,6 +62,6 @@ private
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def draft_params
-      params.require(:draft).permit(:email)
+      params.require(:draft).permit(:email, :share_option)
     end
 end

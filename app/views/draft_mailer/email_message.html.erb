@@ -1,1 +1,7 @@
+<% if @draft_option == "send_email" %>
 <%= render partial: "drafts/formatted_letter" %>
+
+<% else %>
+Fill in my dear grandma letter here:
+<%= @draft_url %>
+<% end %>
