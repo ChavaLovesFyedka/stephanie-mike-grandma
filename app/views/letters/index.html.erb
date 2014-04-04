@@ -16,6 +16,12 @@
         <ul class="dropdown-menu" role="menu">
             <!-- <li><a href="#">Dear Grandma</a></li>
             <li><a href="#">Dear Mr. President</a></li> -->
+  
+            <% @templates.each_with_index do |t, i| %>
+            <li><a href="/letters/<%= t.id %>/drafts/new"><%= t.title %></a></li>
+            <% end %>
+
+
             <li><a href="<%= new_letter_path %>">Create your own</a></li>
         </ul>
         </div>

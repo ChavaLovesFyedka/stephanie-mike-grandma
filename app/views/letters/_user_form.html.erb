@@ -1,11 +1,12 @@
 <div class="jumbotron">
 
   <% if letter.hidden == 1 %>
-    <% @data = letter.content.split(/(.+?}})/).reject { |r| r.empty? }  %>
+    <% @data = letter.content.split(/(.+?}})/).reject { |r| r.strip.empty? || r == "\r<br/>" }  %>
     <p>
+     
       <% @data.each do |line| %>
         <% placeholder = line.match(/{{(.+?)}}/).to_s.gsub("{", "").gsub("}", "") %>
-        <%= "<input type=\"text\" name=\"variables[]\" placeholder=\"#{placeholder}\">".html_safe %> 
+        <%= "<input type=\"text\" name=\"variables[]\" placeholder=\"#{placeholder}\">".html_safe if line.include?("}}") %> 
         <% end %>
   <% else %>
 

@@ -3,13 +3,13 @@
 
 <br>
 <br>
-<br>
+<hr>
 <%= form_for [@letter, @draft] do |f| %>
-<%= f.email_field :email, :placeholder => "enter your email" %><br>
 <%= f.radio_button(:share_option, "send_email") %>
-<%= f.label(:share_option, "Email letter.") %>
+<%= f.label(:share_option, "Email letter.") %> &nbsp;
 <%= f.radio_button(:share_option, "send_form") %>
-<%= f.label(:share_option, "Share with a friend.") %>
+<%= f.label(:share_option, "Share form with a friend.") %><br>
+<%= f.email_field :email, :placeholder => "enter your email" %>
 <br>
 <%= f.submit "Share", :class => "btn btn-info dropdown-toggle" %>
 <% end %>

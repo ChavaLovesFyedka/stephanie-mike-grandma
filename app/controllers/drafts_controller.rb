@@ -3,6 +3,7 @@ class DraftsController < ApplicationController
   def new
     # render the template of the letter
     # for the user to fill in
+    # binding.pry
     @letter = Letter.find(params[:letter_id])
   end
 

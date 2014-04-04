@@ -5,6 +5,7 @@ class LettersController < ApplicationController
   # GET /letters.json
   def index
     @letters = Letter.all
+    @templates = Letter.where("letters.title IS NOT NULL")
   end
 
   # GET /letters/1
