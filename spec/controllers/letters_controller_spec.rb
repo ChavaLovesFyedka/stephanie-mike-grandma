@@ -23,7 +23,7 @@ describe LettersController do
   # This should return the minimal set of attributes required to create a valid
   # letter. As you add validations to letter, be sure to
   # adjust the attributes here as well.
-  let(:valid_attributes) { { "var1" => "MyText" } }
+  let(:valid_attributes) { { :content => "MyText" } }
 
   # This should return the minimal set of values that should be in the session
   # in order to pass any filters (e.g. authentication) defined in
@@ -32,7 +32,7 @@ describe LettersController do
 
   describe "GET index" do
     it "assigns all letters as @letters" do
-      letter = letter.create! valid_attributes
+      letter = Letter.create! valid_attributes
       get :index, {}, valid_session
       assigns(:letters).should eq([letter])
     end
@@ -40,7 +40,7 @@ describe LettersController do
 
   describe "GET show" do
     it "assigns the requested letter as @letter" do
-      letter = letter.create! valid_attributes
+      letter = Letter.create! valid_attributes
       get :show, {:id => letter.to_param}, valid_session
       assigns(:letter).should eq(letter)
     end
@@ -49,13 +49,13 @@ describe LettersController do
   describe "GET new" do
     it "assigns a new letter as @letter" do
       get :new, {}, valid_session
-      assigns(:letter).should be_a_new(letter)
+      assigns(:letter).should be_a_new(Letter)
     end
   end
 
   describe "GET edit" do
     it "assigns the requested letter as @letter" do
-      letter = letter.create! valid_attributes
+      letter = Letter.create! valid_attributes
       get :edit, {:id => letter.to_param}, valid_session
       assigns(:letter).should eq(letter)
     end
@@ -66,33 +66,33 @@ describe LettersController do
       it "creates a new letter" do
         expect {
           post :create, {:letter => valid_attributes}, valid_session
-        }.to change(letter, :count).by(1)
+        }.to change(Letter, :count).by(1)
       end
 
       it "assigns a newly created letter as @letter" do
         post :create, {:letter => valid_attributes}, valid_session
-        assigns(:letter).should be_a(letter)
+        assigns(:letter).should be_a(Letter)
         assigns(:letter).should be_persisted
       end
 
-      it "redirects to the created letter" do
+      it "redirects to the created letter's new draft" do
         post :create, {:letter => valid_attributes}, valid_session
-        response.should redirect_to(letter.last)
+        response.should redirect_to(new_letter_draft_path(Letter.last))
       end
     end
 
     describe "with invalid params" do
       it "assigns a newly created but unsaved letter as @letter" do
         # Trigger the behavior that occurs when invalid params are submitted
-        letter.any_instance.stub(:save).and_return(false)
-        post :create, {:letter => { "var1" => "invalid value" }}, valid_session
-        assigns(:letter).should be_a_new(letter)
+        Letter.any_instance.stub(:save).and_return(false)
+        post :create, {:letter => { :content => "invalid value" }}, valid_session
+        assigns(:letter).should be_a_new(Letter)
       end
 
       it "re-renders the 'new' template" do
         # Trigger the behavior that occurs when invalid params are submitted
-        letter.any_instance.stub(:save).and_return(false)
-        post :create, {:letter => { "var1" => "invalid value" }}, valid_session
+        Letter.any_instance.stub(:save).and_return(false)
+        post :create, {:letter => { :content => "invalid value" }}, valid_session
         response.should render_template("new")
       end
     end
@@ -101,23 +101,23 @@ describe LettersController do
   describe "PUT update" do
     describe "with valid params" do
       it "updates the requested letter" do
-        letter = letter.create! valid_attributes
+        letter = Letter.create! valid_attributes
         # Assuming there are no other letters in the database, this
         # specifies that the letter created on the previous line
         # receives the :update_attributes message with whatever params are
         # submitted in the request.
-        letter.any_instance.should_receive(:update).with({ "var1" => "MyText" })
-        put :update, {:id => letter.to_param, :letter => { "var1" => "MyText" }}, valid_session
+        Letter.any_instance.should_receive(:update).with({ :content => "MyText" })
+        put :update, {:id => letter.to_param, :letter => { :content => "MyText" }}, valid_session
       end
 
       it "assigns the requested letter as @letter" do
-        letter = letter.create! valid_attributes
+        letter = Letter.create! valid_attributes
         put :update, {:id => letter.to_param, :letter => valid_attributes}, valid_session
         assigns(:letter).should eq(letter)
       end
 
       it "redirects to the letter" do
-        letter = letter.create! valid_attributes
+        letter = Letter.create! valid_attributes
         put :update, {:id => letter.to_param, :letter => valid_attributes}, valid_session
         response.should redirect_to(letter)
       end
@@ -125,18 +125,18 @@ describe LettersController do
 
     describe "with invalid params" do
       it "assigns the letter as @letter" do
-        letter = letter.create! valid_attributes
+        letter = Letter.create! valid_attributes
         # Trigger the behavior that occurs when invalid params are submitted
-        letter.any_instance.stub(:save).and_return(false)
-        put :update, {:id => letter.to_param, :letter => { "var1" => "invalid value" }}, valid_session
+        Letter.any_instance.stub(:save).and_return(false)
+        put :update, {:id => letter.to_param, :letter => { :content => "invalid value" }}, valid_session
         assigns(:letter).should eq(letter)
       end
 
       it "re-renders the 'edit' template" do
-        letter = letter.create! valid_attributes
+        letter = Letter.create! valid_attributes
         # Trigger the behavior that occurs when invalid params are submitted
-        letter.any_instance.stub(:save).and_return(false)
-        put :update, {:id => letter.to_param, :letter => { "var1" => "invalid value" }}, valid_session
+        Letter.any_instance.stub(:save).and_return(false)
+        put :update, {:id => letter.to_param, :letter => { :content => "invalid value" }}, valid_session
         response.should render_template("edit")
       end
     end
@@ -144,14 +144,14 @@ describe LettersController do
 
   describe "DELETE destroy" do
     it "destroys the requested letter" do
-      letter = letter.create! valid_attributes
+      letter = Letter.create! valid_attributes
       expect {
         delete :destroy, {:id => letter.to_param}, valid_session
-      }.to change(letter, :count).by(-1)
+      }.to change(Letter, :count).by(-1)
     end
 
     it "redirects to the letters list" do
-      letter = letter.create! valid_attributes
+      letter = Letter.create! valid_attributes
       delete :destroy, {:id => letter.to_param}, valid_session
       response.should redirect_to(letters_url)
     end

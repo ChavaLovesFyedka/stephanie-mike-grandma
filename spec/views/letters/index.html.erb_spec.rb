@@ -3,14 +3,14 @@ require 'spec_helper'
 describe "letters/index" do
   before(:each) do
     assign(:letters, [
-      stub_model(letter,
+      stub_model(Letter,
         :var1 => "MyText",
         :var2 => "MyText",
         :var3 => "MyText",
         :var4 => "MyText",
         :var5 => "MyText"
       ),
-      stub_model(letter,
+      stub_model(Letter,
         :var1 => "MyText",
         :var2 => "MyText",
         :var3 => "MyText",
