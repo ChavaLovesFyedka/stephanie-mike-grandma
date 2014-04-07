@@ -1,4 +1,7 @@
+
 <div class="jumbotron">
+<form method="post">
+<p>Fill in the blanks below to complete your letter!</p><br />
 
   <% if letter.hidden == 1 %>
     <% @data = letter.content.split(/(.+?}})/).reject { |r| r.strip.empty? || r == "\r<br/>" }  %>
@@ -6,7 +9,7 @@
      
       <% @data.each do |line| %>
         <% placeholder = line.match(/{{(.+?)}}/).to_s.gsub("{", "").gsub("}", "") %>
-        <%= "<input type=\"text\" name=\"variables[]\" placeholder=\"#{placeholder}\">".html_safe if line.include?("}}") %> 
+        <%= "<input type=\"text\" name=\"variables[]\" placeholder=\"#{placeholder}\" required>".html_safe if line.include?("}}") %> 
         <% end %>
   <% else %>
 
@@ -14,11 +17,13 @@
     <p>
       <% @data.each do |line| %>
         <% placeholder = line.match(/{{(.+?)}}/).to_s.gsub("{", "").gsub("}", "") %>
-        <%= line.gsub(/({{.+?}})/, "<input type=\"text\" name=\"variables[]\" placeholder=\"#{placeholder}\">").html_safe %>  
+        <%= line.gsub(/({{.+?}})/, "<input type=\"text\" size=\"#{placeholder.size}\" name=\"variables[]\" placeholder=\"#{placeholder}\" required>").html_safe %>  
       <% end %>
     </p>
   <% end %>
-
-
+  <br />
+  <br />
+  <%= submit_tag "Generate Letter", :class => "btn btn-info" %>
+</form>
 
 </div>

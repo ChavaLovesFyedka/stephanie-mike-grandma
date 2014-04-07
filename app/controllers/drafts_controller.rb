@@ -5,6 +5,7 @@ class DraftsController < ApplicationController
     # for the user to fill in
     # binding.pry
     @letter = Letter.find(params[:letter_id])
+    
   end
 
   def create

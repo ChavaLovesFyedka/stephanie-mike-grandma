@@ -11,16 +11,17 @@
 <body>
   <div class="container">
    
-    <div class="header">
-      <ul class="nav nav-pills pull-right">
-        <li><a href="/">Home</a></li>
-        <li><a href="<%= about_path %>">About</a></li>
+    <div class="row text-center">
       
-      </ul>
-      <h3 class="grandma_h1">Dear Grandma</h3>
+      <a href="/" ><img src="<%= image_path("logo1.png") %>" width="35%" height="35%"></a></li>
      </div>
             <%= yield %>
     
   </div>
+  <footer class="footer text-center"><p>Made with care by Mike and Stephanie @flatironschool.</p>
+    <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://dear-grandma.herokuapp.com/" data-text="Create your own awesome madlib @ DearGrandma" data-via="flatironschool" data-size="large" data-hashtags="deargrandma">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+  </footer>
 </body>
 </html>
