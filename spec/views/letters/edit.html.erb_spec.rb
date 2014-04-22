@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe "letters/edit" do
   before(:each) do
-    @letter = assign(:letter, stub_model(letter,
+    @letter = assign(:letter, stub_model(Letter,
       :var1 => "MyText",
       :var2 => "MyText",
       :var3 => "MyText",
