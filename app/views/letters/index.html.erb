@@ -20,10 +20,12 @@
             <% @templates.each_with_index do |t, i| %>
             <li><a href="/letters/<%= t.id %>/drafts/new"><%= t.title %></a></li>
             <% end %>
-
-
-            <li><a href="<%= new_letter_path %>">Create your own</a></li>
         </ul>
+        </div>
+        <div class="btn">
+          <form action="<%= new_letter_path %>">
+            <input type="submit" value="Create your own!" class="btn btn-danger">
+          </form>
         </div>
       </div> 
       <div class="col-md-2"></div>     
