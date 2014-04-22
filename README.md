@@ -1,4 +1,4 @@
-Dear Grandma
+# Dear Grandma
 
 ## Description
 
@@ -15,8 +15,11 @@ Dear Grandma is a fun little web-app that allows you to create your own madlibs!
 ## Features
 
 • Create your own madlib from scratch
+
 • Fill in a madlib template
+
 • Email the finished letter to a friend
+
 • Email the your custom madlib template to a friend
 
 
