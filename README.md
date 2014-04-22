@@ -1,3 +1,4 @@
+[![Code Climate](https://codeclimate.com/github/cheeseandpepper/stephanie-mike-grandma.png)](https://codeclimate.com/github/cheeseandpepper/stephanie-mike-grandma)
 # Dear Grandma
 
 ## Description
