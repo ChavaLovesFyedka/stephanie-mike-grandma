@@ -1,40 +1,41 @@
-# Grandma App
+[![Code Climate](https://codeclimate.com/github/cheeseandpepper/stephanie-mike-grandma.png)](https://codeclimate.com/github/cheeseandpepper/stephanie-mike-grandma)
+# Dear Grandma
 
 ## Description
 
-Add a short description of your app.
+Dear Grandma is a fun little web-app that allows you to create your own madlibs! Users can either create their own using our special notation or just fill in one of the templates. Users can also email either the finished letter or the form for a friend to fill out.
 
 ## Screenshots
+![Alt text](https://dl.dropboxusercontent.com/u/5533848/deargrandma1.png)
+![Alt text](https://dl.dropboxusercontent.com/u/5533848/deargrandma2.png)
+![Alt text](https://dl.dropboxusercontent.com/u/5533848/deargrandma3.png)
 
-Add some spiffy screenshots of your app here.
 
-## Background
 
-Why did you want to make this app? What was your development process
-like?
 
 ## Features
 
-Bullet point some of the key features of your app here.
+• Create your own madlib from scratch
+
+• Fill in a madlib template
+
+• Email the finished letter to a friend
+
+• Email the your custom madlib template to a friend
+
 
 ## Usage
 
-How do letters use your app?
+To use Dear Grandma first choose a template or create your own. If you choose a template, fill in the boxes with your own words that satisfy the part of speech. After, hit submit and see the result. From there you can email it to a friend.
+
+To create your own template, choose "Create your own" and follow the instructions. Basically you can write your own letter or story in the text area and wherever you want another user to fill in a word, simply wrap it in double curly braces as seen here: {{ }}. Whatever you put in the braces will show up as the placeholder text in the next screen. 
 
 ## Development/Contribution
 
-Explain how people can contribute to your app. How should they write tests?
-Any things in particular you'd like to see in pull requests?
+If you have any great ideas or improvements, submit a pull request!
 
-## Future
 
-What features are you currently working on? Only mention things that you
-actually are implementing. No pie-in-the-sky-never-gonna-happen stuff.
 
 ## Author
 
-Link to your blog, twitter, etc!
-
-## License
-
-My Spiffy App is MIT Licensed. See LICENSE for details.
+Made by Stephanie and Mike at the Flatiron School in 2014.

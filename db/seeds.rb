@@ -92,3 +92,36 @@ Letter.create(:content => "Dear {{Mrs., Mr., Ms., Miss}} {{name of teacher}}, <b
   You make learning {{adjective}}, especially in {{noun or verb}} class.<br/><br/>
   School is {{adjective}} because of you!<br/><br/>
   Sincerely, {{name}}", :hidden => 1, :title => "Dear Teacher")
+
+# literary agent
+Letter.create(:content => "Dear Literary Agent, <br><br>
+  Please allow me to introduce you to my book, \'The {{adjective}} {{noun}} of {{location}}.\'  This {{adjective}} work of literary fiction is complete at {{number}} words.<br><br>
+  My book is about the {{adjective}} {{profession}}, named {{person you know}}, whose greatest desire is to {{verb}} in {{location}}.  However, she is so afraid of {{plural noun}} that she is unable to {{verb}}.  She must {{verb}} or else she will not be able to {{verb}}.<br><br>
+  To make matters worse, the {{adjective}} {{another person}} will stop at nothing to thwart {{first person}}'s goal.<br><br>
+  I think that {{demographic group}} and {{another demographic group}} will love this story.<br><br>
+  I am an Associate Professor of {{school subject}} at {{North/South/East/West}} {{Noun}} University.  This is my {{ordinal number}} novel.<br><br>
+  I'd be thrilled if you would consider my book for publication.  Thank you for your {{adjective}} time and consideration.<br><br>
+  Sincerely, {{name}}", :hidden => 1, :title => "Dear Literary Agent")
+
+# santa
+
+Letter.create(:content => "Dear Santa, <br><br>
+  My name is {{your name}}, and I am {{number}} years old.<br><br>
+  I have been very {{adjective}} this year.  I even cleaned the {{noun}} and helped my {{adjective}} neighbors fix their {{noun}}.<br><br>
+  I've been trying to get off the naughty list since I ate all of the {{plural noun}} last year.<br><br>
+  I can't wait for you to come to {{location}} on your {{type of vehicle}}, pulled by your {{animals}}.<br><br>
+  Can you please bring me a {{noun}} to ride?<br><br>
+  I am also desperately in need of new {{adjective}} {{items of clothing}}.<br><br>
+  When you come down the {{part of house}}, I will leave you a plate of {{plural noun}} and {{plural noun}} in the {{room in house}}, just in case you're hungry!<br><br>
+  Thank you, and I hope I get to {{verb}} you someday!<br><br>
+  Love, {{your name}}", :hidden => 1, :title => "Dear Santa")
+
+Letter.create(:content => "Dear Boss, <br><br>
+  With all due respect, I have greatly enjoyed working for your company, American {{plural noun}} & Co. for the last {{amount of time}}.<br><br>
+  I regret to tell you that my current salary of {{number}} dollars does not meet my expectations.<br><br>
+  During my {{adjective}} employment period, I have completed my {{plural noun}} on time and achieved my {{plural noun}}.<br><br>
+  I took on extra work like the time I {{past-tense verb}} the {{office supplies}}.<br><br>
+  My {{adjective}} behavior and {{adjective}} communication with staff members and customers has also been {{adjective}}.<br><br>
+  I think it would be nice if you would raise my salary by {{number}} dollars.  Therefore, I humbly ask for a meeting in order to discuss my {{adjective}} performance.<br><br>
+  I think I deserve this {{adjective}} raise as I am a loyal and {{adjective}} worker on your team.<br><br>
+  Yours sincerely, {{name}}", :hidden => 1, :title => "Dear Boss")
